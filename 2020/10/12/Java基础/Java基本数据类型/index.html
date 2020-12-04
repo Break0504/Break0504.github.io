@@ -460,23 +460,6 @@ Integer 内部使用了 IntegerCache，
 
 
 
-<!-- 《utteranc评论：基于github issue的评论系统 -->
-
-    <section id="comments" class="comments">
-      <style>
-        .utterances{max-width: 100%;}
-      </style>
-        <script src="https://utteranc.es/client.js"
-                repo="break/break.github.io"
-                issue-term="title"
-                theme="github-light"
-                crossorigin="anonymous"
-                async>
-        </script>
-  </section>
-
-<!-- utteranc评论》 -->
-
           </div>
         </div>
       </div>
@@ -760,6 +743,35 @@ Integer 内部使用了 IntegerCache，
   </div>
 
   
+<script type="text/javascript" src="/plugins/TweenMax/TweenMax.min.js"></script>
+<script type="text/javascript" src="/plugins/TweenMax/HoverImg.js"></script>
+
+<script>
+
+
+  var hoverEffect = {
+    "subNav": ".left-col .social a"
+  }
+
+
+  for (var x in hoverEffect) {
+    // 初始化data-img属性值
+    let $em = document.querySelectorAll(hoverEffect[x]);
+    $em.forEach(($a) => {
+      //console.log($a.href);
+      if (isImageType($a.href)) {
+        $a.setAttribute("data-img", $a.href)
+      }
+    })
+    // 实现悬停元素预览图片效果
+    let $a = document.querySelectorAll(hoverEffect[x] + "[data-img]");
+    $a.forEach(($em) => {
+      new HoverImgFx1($em)
+    })
+  }
+
+</script>
+
   
 <script type="text/javascript" src="/plugins/activate-power-mode/activate-power-mode.js"></script>
 <script>
