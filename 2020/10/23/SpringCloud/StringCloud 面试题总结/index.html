@@ -354,27 +354,28 @@
 
 
 
+  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div>
 
-  <div id="giteement-ctn"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '',
+  	clientSecret: '',
+  	repo: 'blog-comments',
+  	owner: 'Break0504',
+  	admin: ['Break0504'],
+  	id: 'Fri Oct 23 2020 13:52:00 GMT+0800',
+  	distractionFreeMode: 'true'
+})
+gitalk.render('gitalk-container')
+}
+</script>
+
   
-    <link rel="stylesheet" href="/lib/default.css">
-    <script src="/lib/giteement.browser.js"></script>
-  
-  <script>
-  <!-- id: "StringCloud 面试题总结" -->
-  var giteement = new Giteement({
-    id: '20201023135200',
-    owner: 'Break0504',
-    repo: 'break0504',
-    backcall_uri: 'https://break0504.gitee.io',
-    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
-    oauth: {
-      client_id: '60368cefa1a2b6824247cc59b5cf8147e500396b22f873883746613515e6c272',
-      client_secret: '2dfdffbbd9cf7dd1f9372e4a06e3e08852c3615c687d3058f66d4d9fd518e8a1'
-    },
-  })
-  giteement.render('giteement-ctn')
-  </script>
+
 
 
 
